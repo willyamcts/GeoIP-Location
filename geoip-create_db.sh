@@ -56,6 +56,7 @@ for qtt_address in ${!masks[@]}; do
   sed -i "s#|${qtt_address}|#|${masks[$qtt_address]}|#g" $TMP_FILE
 done
 
+rm ${DB_DIR}/{ipv4,ipv6}/*.zone
 # create database directory
 echo "Creating DB for: "
 for code in $countries; do
